@@ -1,29 +1,15 @@
-import React from "react";
-
-
-
-function Navbar () {
-    return(
-        <nav>
-            <ul class="nav nav-tabs my-4">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="movies.html">Películas</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="series.html">Series</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="favorites.html">Favoritas</a>
-                </li>
-            </ul>
-            <form class="search-form" action="results.html" method="get">
-                <input type="text" class="" name="searchData" placeholder="Buscar..." value=""/>
-                <button type="submit" class="btn btn-success btn-sm">Buscar</button>
-            </form>
-        </nav>
-    )}
-
-export default Navbar
+import {Link} from "react-router-dom"
+import "./NavBar.css"
+function NavBar() {
+    return (
+       <ul className="ul">
+        <li><Link className="link" to="/">Home</Link></li>
+        <li><Link className="link" to="/Top-Ranking">Mejor Valoración</Link></li>
+        <li><Link className="link" to="/Ahora-Reproduciendo">Peliculas en cartel</Link></li>
+        <li><Link className="link" to="/favorites">Favoritos</Link></li>
+       </ul>
+        
+    );
+  }
+  
+export default NavBar;

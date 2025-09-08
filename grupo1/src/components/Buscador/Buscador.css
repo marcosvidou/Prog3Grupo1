@@ -1,41 +1,4 @@
-section {
-    color: whitesmoke;
-    padding: 25px;
-    background-color: black;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-}
 
-
-.submit {
-    display: flex;
-    justify-content: center;
-    margin: 20px 0;
-}
-
-.input {
-    padding: 6px 12px;
-    width: 200px;
-    background-color: black;
-    color: white;
-    border: 1px solid white;
-    border-radius: 6px;
-    font-size: 14px;
-}
-
-.ver {
-    height: 36px;
-    padding: 0 16px;
-    background-color: grey;
-    border-radius: 5px;
-    font-size: 14px;
-    font-weight: bold;
-    color: gold;
-    border: 1px solid black;
-    cursor: pointer;
-}
 
 @media (max-width: 430px) {
       

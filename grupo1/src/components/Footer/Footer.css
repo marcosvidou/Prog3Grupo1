@@ -1,0 +1,13 @@
+footer{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 430px) {
+    footer{
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+}

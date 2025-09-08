@@ -1,31 +1,34 @@
 import React from "react";
 import { Component } from "react";
+import { withRouter } from "react-router-dom"
 import "./Buscador.css";
 
 class Buscador extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            search: ""
+            busqueda: ""
         }
     }
 
-    controlarEvento(evento){
+    prevenirRecarga(event){
         evento.preventDefault()
-        this.props.history.push(`/search/` + this.state.search)
+        this.props.history.push("/busqueda/" + this.state.busqueda)
     }
 
-    controlarInput(evento){
-        this.setState({search: evento.target.value})
+    controlarCambios(event){
+        this.setState(
+            {busqueda: event.target.value          
+            })
     }
 
     render() {
         return (
             <section>
                 <div>
-                    <form className="submit" onSubmit={(evento) => this.controlarEvento(evento)}>
-                        <input className="input" onChange={(evento) => this.controlarInput(evento)} name="search" value={this.state.search}  />
-                        <button className="ver" type="submit">Search</button>
+                    <form className="" onSubmit={(event) => this.prevenirRecarga(event)}>
+                        <input className="" onChange={(event) => this.controlarCambios(event)} name="busqueda" value={this.state.busqueda}  />
+                        <button className="" type="submit">Search</button>
                     </form>
                 </div>
             </section>
