@@ -2,19 +2,16 @@ import React from "react";
 import "./Header.css"
 import NavBar from "../Navbar/Navbar";
 
-
 function Header() {
-
   return (
-    <React.Fragment>
-    <div className=""><img className="" src="../public/img/logoG1" alt="logoG1" /></div>
-    <nav>
-        <NavBar />
-    </nav>
-    </React.Fragment>
-    
-    
+    <header className="header-row">
+      <div className="brand">
+        <img src="/img/logoG1.png" alt="Logo" />
+        <span className="team-name">EMT FILMS</span>
+      </div>
+      <NavBar />
+    </header>
   );
 }
 
-export default Header
+export default Header;
