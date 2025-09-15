@@ -1,5 +1,6 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
+import './PeliculaCard.css'
 // import Favoritos from "../Favoritos/Favoritos";
 
 

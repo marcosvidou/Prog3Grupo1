@@ -1,12 +1,22 @@
 
+.ul{
+  display: flex;
+  gap: 16px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
 
+.link{
+  text-decoration: none;
+  color: #111827;
+  padding: 6px 8px;
+  border-radius: 6px;
+}
 
-
-
-
-
-
-
+.link:hover{
+  background: #f3f4f6;
+}
 
 
 @media (max-width: 430px) {

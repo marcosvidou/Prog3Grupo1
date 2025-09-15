@@ -1,13 +1,21 @@
+nav, .header-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  padding: 10px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #ffffff;
+}
 
-
-
-
-
-
-
-
-
-
+.brand img{
+  height: 36px;
+  display: block;
+}
 
 @media (max-width: 430px) {
     .logo {

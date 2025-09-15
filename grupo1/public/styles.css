@@ -1,91 +1,12 @@
-nav {
-    display: grid;
-    grid-template-columns: 1fr;
-    background-color: #eee;
-    border-radius: 4px;
-    margin-bottom: 20px;
-}
-.nav {
-    margin: 0 !important;
-}
-.nav a{
-    color: #444;
-    text-decoration: none;
-}
-.nav a:hover{
-    font-weight: bold;
-}
-.search-form, .filter-form {
-    padding: .5rem 1rem;
-    display: grid;
-    grid-template-columns: 4fr 1fr;
-    column-gap: 5px;
-}
-.filter-form {
-    grid-template-columns: 1fr;
-}
-.search-form .btn-sm{
-    line-height: 1;
-    font-size: 0.9rem;
-}
-.search-form input,
-.filter-form input {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    padding-top: 3px;
-    vertical-align: middle;
-    line-height: 1;
-    font-size: 1rem;
-    padding-bottom: 4px;
-}
-.filter-form input {
-    line-height: 1.5;
-}
-.cards {
-    padding: 0.75rem 1.25rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-between;
-    margin-bottom: 2%;
-}
-.cardBody {
-    margin-top: 20px;
-}
-.single-card-people {
-    width: 19%;
-}
-.single-card-movie {
-    width: 24%;
-}
-.single-card-playing {
-    width: 15%;
-}
-#now-playing .card-text{
-    height: 100px;
-    overflow: hidden;
-}
-.single-card-tv {
-    width: 19%;
-}
-.tv-show .card-text{
-    height: 100px;
-    overflow: hidden;
-}
-.single-card-on-air{
-    width: 15%;
-}
-#on-air-today .card-text{
-    height: 100px;
-    overflow: hidden;
+*{ box-sizing: border-box; }
+body{
+  margin: 0;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: #111827;
+
+
+background: radial-gradient(1200px 800px at 20% -10%, #eef2ff 0%, transparent 60%),
+            radial-gradient(1000px 700px at 110% 10%, #ecfeff 0%, transparent 60%),
+            #fafafa;
 }
 
-.all-movies .single-card-movie {
-    width: 15%;
-}
-
-@media(min-width: 765px){
-    nav {
-        grid-template-columns: 4fr 3fr;
-    }
-}
