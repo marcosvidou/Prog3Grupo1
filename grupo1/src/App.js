@@ -6,6 +6,7 @@ import { Route, Switch } from "react-router-dom"
 
 import Home from "./screens/Home/Home";
 import NotFound from "./screens/Error/Not-Found";
+import DetallePelicula from "./components/DetallePelicula/DetallePelicula";
 
 
 function App() {
@@ -19,6 +20,7 @@ function App() {
     /* <Route path="/series" component={Series}/>
     <Route path="/de:id" talle/id/component={Detalle}/>
     <Route path="/busqueda/:busqueda" component={SearchResults} /> */}
+    <Route exact path="/DetallePelicula/:id" component={DetallePelicula} />
     <Route path={''} component={NotFound} />
     </Switch>
     <Footer />
