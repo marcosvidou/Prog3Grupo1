@@ -1,9 +1,9 @@
 import React from "react";
 import { Component } from "react";
 import {Link} from "react-router-dom"
-import Buscador from "../components/Buscador/Buscador"
-import SeccionTopRated from "../components/TopRanking/TopRanking";
-import SeccionNowPlaying from "../components/ReproduciendoAhora/ReproduciendoAhora";
+import Buscador from "../../components/Buscador/Buscador";
+import TopRanking from "../../components/TopRanking/TopRanking";
+import AhoraReproduciendo from "../../components/AhoraReproduciendo/AhoraReproduciendo";
 
 class Home extends Component{
     render(){
@@ -21,7 +21,7 @@ class Home extends Component{
               <h2 className="">Peliculas en cartel</h2>
               <h3><Link className="" to="/Ahora-Reproduciendo">Ver todas</Link></h3>
             </div>
-            <ReproduciendoAhora />
+            <AhoraReproduciendo/>
         </main>
     </React.Fragment>
       )

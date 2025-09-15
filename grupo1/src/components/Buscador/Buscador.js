@@ -1,6 +1,5 @@
 import React from "react";
 import { Component } from "react";
-import { withRouter } from "react-router-dom"
 import "./Buscador.css";
 
 class Buscador extends Component {
@@ -12,7 +11,7 @@ class Buscador extends Component {
     }
 
     prevenirRecarga(event){
-        evento.preventDefault()
+        event.preventDefault()
         this.props.history.push("/busqueda/" + this.state.busqueda)
     }
 

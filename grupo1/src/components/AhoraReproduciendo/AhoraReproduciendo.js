@@ -1,10 +1,10 @@
 import React from "react";
 import { Component } from "react";
-import "./SeccionNowPlaying.css";
-import DataPeliculas from "../Peliculas/Peliculas";
+import "./AhoraReproduciendo.css";
+import PeliculasInfo from "../Cards/PeliculaCard";
 import { apikey } from "../../apikey";
 
-class PeliculasEnCartel extends  Component{
+class AhoraReproduciendo extends  Component{
     constructor(props){
         super(props);
         this.state = {
@@ -23,10 +23,10 @@ class PeliculasEnCartel extends  Component{
         return(
             <section>
                 {this.state.filtro.map((pelis, idx) => (
-                    <DataPeliculas key={idx} peliculas={pelis} />
+                    <PeliculasInfo key={idx} peliculas={pelis} />
                 ))}
             </section>
         )
     }
 }
-export default PeliculasEnCartel;
+export default AhoraReproduciendo;
