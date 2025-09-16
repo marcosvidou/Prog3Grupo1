@@ -7,6 +7,7 @@ import { Route, Switch } from "react-router-dom"
 import Home from "./screens/Home/Home";
 import NotFound from "./screens/Error/Not-Found";
 import DetallePelicula from "./components/DetallePelicula/DetallePelicula";
+import TopRanking from "./components/TopRanking/TopRanking";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     <Route path="/de:id" talle/id/component={Detalle}/>
     <Route path="/busqueda/:busqueda" component={SearchResults} /> */}
     <Route exact path="/DetallePelicula/:id" component={DetallePelicula} />
+    <Route path="/Top-Ranking" component={TopRanking}/>
     <Route path={''} component={NotFound} />
     </Switch>
     <Footer />

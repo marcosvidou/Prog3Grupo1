@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./DetallePelicula.css"
 
 
 let apikey = "4c973abb945f46e5cccf46b73e8d6135";
@@ -32,12 +33,12 @@ class DetallePelicula extends Component {
             <article className="card">
                 <div className = "card-row">
                     
-                    <h4 className="nombrepeli">{this.state.pelicula.title}</h4>
-                    <div className="puntaje">{this.state.pelicula.vote_average}</div>
+                    <h4 className="nombrepelicula">{this.state.pelicula.title}</h4>
+                    <div className="valoracion">{this.state.pelicula.vote_average}</div>
                     <img className="portada" src={"https://image.tmdb.org/t/p/w342" + this.state.pelicula.poster_path} alt="pelicula"/>
                     <div className="estreno">{this.state.pelicula.release_date}</div>
                     <div className="duracion">{this.state.pelicula.length}</div>
-                    <div className="sinopsis">{this.state.pelicula.overview}</div>
+                    <div className="review">{this.state.pelicula.overview}</div>
 {/*                     {this.state.pelicula.genres.map((genre) => (<div className="genero">{genre.name}</div> ))}
  */}
 

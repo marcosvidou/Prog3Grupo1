@@ -21,7 +21,7 @@ class TopRanking extends  Component{
     }
     render() {
         return (
-            <section>
+            <section className="container">
                 {this.state.filtro.map((pelis, idx) => (
                     <PeliculasInfo key={idx} peliculas={pelis} />
                 ))}
