@@ -23,11 +23,14 @@ class Buscador extends Component {
 
     render() {
         return (
-            <section>
+            <section className="Formulario">
                 <div>
-                    <form className="" onSubmit={(event) => this.prevenirRecarga(event)}>
-                        <input className="" onChange={(event) => this.controlarCambios(event)} name="busqueda" value={this.state.busqueda}  />
-                        <button className="" type="submit">Search</button>
+                <div className="title">
+                <h2>BUSCAR PELICULA</h2>
+                </div>
+                    <form className="buscador-form" onSubmit={(event) => this.prevenirRecarga(event)}>
+                        <input className="buscador-input" onChange={(event) => this.controlarCambios(event)} name="busqueda" value={this.state.busqueda}  />
+                        <button className="buscador-btn" type="submit">SEARCH</button>
                     </form>
                 </div>
             </section>

@@ -4,22 +4,22 @@ import {Link} from "react-router-dom"
 import Buscador from "../../components/Buscador/Buscador";
 import TopRanking from "../../components/TopRanking/TopRanking";
 import AhoraReproduciendo from "../../components/AhoraReproduciendo/AhoraReproduciendo";
+import "./Home.css"
 
 class Home extends Component{
     render(){
       return(
         <React.Fragment>
           <main>
-            <h2 className="">Buscar pelicula</h2>
             <Buscador history={this.props.history}/>
-            <div className="">
-              <h2 className="">Peliculas con valoracion más alta</h2>
-                <h3><Link className="" to="/Top-Ranking">Ver todas</Link></h3>
+            <div className="Contenedor">
+              <h2 className="">PELICULAS CON VALORACION MAS ALTA</h2>
+                <h3><Link className="Vertodas" to="/Top-Ranking">VER TODAS</Link></h3>
             </div>
             <TopRanking />
-            <div className="">
-              <h2 className="">Peliculas en cartel</h2>
-              <h3><Link className="" to="/Ahora-Reproduciendo">Ver todas</Link></h3>
+            <div className="Contenedor">
+              <h2 className="">PELICULAS EN CARTEL</h2>
+              <h3><Link className="Vertodas" to="/Ahora-Reproduciendo">VER TODAS</Link></h3>
             </div>
             <AhoraReproduciendo/>
         </main>

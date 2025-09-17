@@ -1,17 +1,16 @@
 import React from "react";
 import { Component } from "react";
-import "./AhoraReproduciendo.css";
 import PeliculasInfo from "../Cards/PeliculaCard";
 import { apikey } from "../../apikey";
 
-class AhoraReproduciendo extends  Component{
+class Series extends  Component{
     constructor(props){
         super(props);
         this.state = {
-            pelis: [], filtro: [] }
+            pelis: [], filtro: []}
     }
     componentDidMount(){
-        fetch("https://api.themoviedb.org/3/movie/now_playing?api_key=" + apikey)
+        fetch("https://api.themoviedb.org/3/tv/top_rated?api_key=" + apikey)
         .then(response => response.json())
         .then(data => this.setState({
             pelis: data,
@@ -19,14 +18,14 @@ class AhoraReproduciendo extends  Component{
         }))
         .catch(error => console.log(error))
     }
-    render(){
-        return(
-            <section>
+    render() {
+        return (
+            <section className="container">
                 {this.state.filtro.map((pelis, idx) => (
                     <PeliculasInfo key={idx} peliculas={pelis} />
                 ))}
             </section>
-        )
+        );
     }
 }
-export default AhoraReproduciendo;
+export default Series;

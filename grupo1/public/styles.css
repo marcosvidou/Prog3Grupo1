@@ -3,10 +3,4 @@ body{
   margin: 0;
   font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   color: #111827;
-
-
-background: radial-gradient(1200px 800px at 20% -10%, #eef2ff 0%, transparent 60%),
-            radial-gradient(1000px 700px at 110% 10%, #ecfeff 0%, transparent 60%),
-            #fafafa;
 }
-
