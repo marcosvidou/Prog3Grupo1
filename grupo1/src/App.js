@@ -10,6 +10,7 @@ import DetallePelicula from "./components/DetallePelicula/DetallePelicula";
 import TopRanking from "./components/TopRanking/TopRanking";
 import Series from "./components/Series/Series"
 import AhoraReproduciendo from "./components/AhoraReproduciendo/AhoraReproduciendo";
+import Buscador from "./components/Buscador/Buscador"
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
     <Route exact path="/DetallePelicula/:id" component={DetallePelicula} />
     <Route path="/Ahora-Reproduciendo" component={AhoraReproduciendo}/>
     <Route path="/Top-Ranking" component={TopRanking}/>
+    <Route path="/busqueda/:busqueda" component={Buscador} />
     <Route path="/series" component={Series}/>
     <Route path={''} component={NotFound} />
     </Switch>
