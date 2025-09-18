@@ -16,12 +16,12 @@ class Home extends Component{
               <h2 className="">PELICULAS CON VALORACION MAS ALTA</h2>
                 <h3><Link className="Vertodas" to="/Top-Ranking">VER TODAS</Link></h3>
             </div>
-            <TopRanking />
+            <TopRanking filtro={true}/>
             <div className="Contenedor">
               <h2 className="">PELICULAS EN CARTEL</h2>
               <h3><Link className="Vertodas" to="/Ahora-Reproduciendo">VER TODAS</Link></h3>
             </div>
-            <AhoraReproduciendo/>
+            <AhoraReproduciendo filtro= {true}/>
         </main>
     </React.Fragment>
       )

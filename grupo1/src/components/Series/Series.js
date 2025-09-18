@@ -1,7 +1,8 @@
 import React from "react";
 import { Component } from "react";
-import PeliculasInfo from "../Cards/PeliculaCard";
+//import PeliculasInfo from "../Cards/PeliculaCard";
 import { apikey } from "../../apikey";
+import SerieInfo from "../Cards/SerieCard";
 
 class Series extends  Component{
     constructor(props){
@@ -22,7 +23,7 @@ class Series extends  Component{
         return (
             <section className="container">
                 {this.state.filtro.map((pelis, idx) => (
-                    <PeliculasInfo key={idx} peliculas={pelis} />
+                    <SerieInfo key={idx} peliculas={pelis} />
                 ))}
             </section>
         );

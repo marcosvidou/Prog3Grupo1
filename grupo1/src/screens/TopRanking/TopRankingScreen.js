@@ -1,7 +1,6 @@
 import React from "react";
-import NavBar from "../../components/Navbar/Navbar";
-import Footer from "../../components/Footer/Footer";
-import DetallePelicula from "../../components/DetallePelicula/DetallePelicula";
+//import DetallePelicula from "../../components/DetallePelicula/DetallePelicula";
+import TopRanking from "../../components/TopRanking/TopRanking";
 
 function TopRankingScreen(props) {
 
@@ -9,9 +8,9 @@ function TopRankingScreen(props) {
     return (
         <React.Fragment>
             <h1>Udesa Movies</h1>
-            <NavBar />
-            <DetallePelicula />
-            <Footer />
+            
+            < TopRanking filtro={false} />
+            
         </React.Fragment>
     );
 }

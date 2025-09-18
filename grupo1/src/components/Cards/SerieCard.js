@@ -4,7 +4,7 @@ import './PeliculaCard.css'
 // import Favoritos from "../Favoritos/Favoritos";
 
 
-class PeliculasInfo extends Component {
+class SerieInfo extends Component {
     constructor(props){
         super(props);
         this.state={
@@ -24,21 +24,19 @@ class PeliculasInfo extends Component {
         <div className="loader"></div>
       )
     }
-
-    const { id, title, poster_path, overview, vote_average } = peliculas;
-
+    const { id, name, poster_path, overview, vote_average } = peliculas;
     return (
-      <article className="info">
-        <h3 className="tituloProd">{title}</h3>
+        <article className="info">
+        <h3 className="tituloProd">{name}</h3>
         <h3 className="Valuada">{vote_average}</h3>
         <img className="foto" src={ 'https://image.tmdb.org/t/p/w342' + poster_path} alt="foto" />
         {<button className="boton" onClick={() => this.clickViewDescription()}>{this.state.viewDescription ? "Ocultar descripcion": "Ver descripcion"}</button>}
         <p className={`description ${this.state.viewDescription ? "show" : "hide"}`}>{overview}</p>
-        <button className="boton"><Link className="detalle" to={`/DetallePelicula/movie/${id}`}>Ir a detalle</Link></button>
+        <button className="boton"><Link className="detalle" to={`/DetallePelicula/tv/${id}`}>Ir a detalle</Link></button>
         {/* <Favoritos id={id} borrarDeFavoritos={this.props.borrarDeFavoritos}/> */}
-      </article>    
+        </article>    
     );
   }
 }
 
-export default PeliculasInfo;
+export default SerieInfo;
