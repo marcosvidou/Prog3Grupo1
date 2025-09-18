@@ -38,7 +38,7 @@ class AhoraReproduciendo extends  Component{
     render(){
         return( 
             <>
-            <input placeholder="filtrarPeliculas" onChange={(e)=> this.filtrar(e)}/>
+            <input className="filtro-input" placeholder="Filtrar Peliculas" onChange={(e)=> this.filtrar(e)}/>
             <section>
                 {this.state.textoInput.length==0 ?
                 this.state.pelis.map((pelis, idx) => (
@@ -49,7 +49,7 @@ class AhoraReproduciendo extends  Component{
 
             }
             </section>
-            {this.props.filtro ? null : <button onClick={()=>this.cargarmas()} className="">CARGAR MAS</button>}
+            {this.props.filtro ? null : <button onClick={()=>this.cargarmas()} className="btn-cargar">CARGAR MAS</button>}
             </>
         )
     }

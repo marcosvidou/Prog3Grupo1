@@ -1,3 +1,55 @@
+.filtro-input {
+    padding: 8px 12px;
+    margin: 15px 0;
+    width: 250px;
+  
+    border: 1px solid #d8c3a5;     
+    border-radius: 6px;
+    background-color: #fefaf6;     
+    
+    font-size: 14px;
+    font-family: inherit;
+    outline: none;
+  
+    transition: all 0.3s ease;
+    display: block;
+  }
+  
+  
+  .filtro-input:focus {
+    border-color: #c19a6b;         
+    box-shadow: 0 0 5px rgba(193, 154, 107, 0.4);
+    background-color: #fffdf9;
+  }
+  
+  
+  .filtro-input::placeholder {
+    color: #a48f78;
+    font-style: italic;
+  }
+
+  .btn-cargar {
+    display: block;
+    margin: 25px auto;
+    padding: 10px 20px;
+    background-color: #e6d5c3;   
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  .btn-cargar:hover {
+    background-color: #c19a6b;   
+    color: #fff;
+    transform: scale(1.05);
+  }
+  
+  .btn-cargar:active {
+    transform: scale(0.97);
+  }
 
 section {
     display: flex;
