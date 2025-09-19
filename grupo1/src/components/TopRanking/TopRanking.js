@@ -8,13 +8,13 @@ class TopRanking extends  Component{
     constructor(props){
         super(props);
         this.state = {
-            pelis: [], page: 2 , peliculasFiltradas: [], textoInput : ""}
+            pelis: [], page: 2 , peliculasFiltradas: [], textoInput : "", cargando: true}
     }
     componentDidMount(){
         fetch("https://api.themoviedb.org/3/movie/top_rated?api_key=" + apikey)
         .then(response => response.json())
         .then(data => this.setState({
-            pelis: this.props.filtro ? data.results.slice(0,5) : data.results
+            pelis: this.props.filtro ? data.results.slice(0,5) : data.results, cargando: false
         }))
         .catch(error => console.log(error))
     }
@@ -39,6 +39,7 @@ class TopRanking extends  Component{
         return( 
             <>
             <input className="filtro-input" placeholder="Filtrar Peliculas" onChange={(e)=> this.filtrar(e)}/>
+             {this.state.cargando ? <p>Cargando...</p> :
             <section>
                 {this.state.textoInput.length==0 ?
                 this.state.pelis.map((pelis, idx) => (
@@ -48,6 +49,7 @@ class TopRanking extends  Component{
                 ))
             }
             </section>
+    }
             {this.props.filtro ? null : <button onClick={()=>this.cargarmas()} className="btn-cargar">CARGAR MAS</button>}
             </>
         )

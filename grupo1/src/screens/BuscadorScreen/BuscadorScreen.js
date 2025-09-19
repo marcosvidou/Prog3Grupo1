@@ -27,7 +27,7 @@ class BuscadorScreen extends  Component{
     render() {
         return( 
             <>
-            {this.state.cargando ? <p>cargando</p> : 
+            {this.state.cargando ? <p>Cargando...</p> : 
             <section>
             {this.state.pelis.map((pelis, idx) => (
                 this.props.match.params.contenido == "movie" ? <PeliculasInfo key={idx} peliculas={pelis} /> : <SerieInfo key={idx} peliculas={pelis} />
