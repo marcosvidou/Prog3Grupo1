@@ -4,7 +4,6 @@ import { apikey } from "../../apikey";
 import PeliculasInfo from "../../components/Cards/PeliculaCard";
 import SerieInfo from "../../components/Cards/SerieCard";
 
-
 class BuscadorScreen extends  Component{
     constructor(props){
         super(props);

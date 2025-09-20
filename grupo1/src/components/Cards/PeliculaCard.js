@@ -1,32 +1,58 @@
 import { Component } from "react";
 import { Link } from "react-router-dom";
 import './PeliculaCard.css'
-// import Favoritos from "../Favoritos/Favoritos";
-
 
 class PeliculasInfo extends Component {
     constructor(props){
         super(props);
         this.state={
-            viewDescription: false
+            viewDescription: false, textoFavoritos : ""
         }
     }
-
+    componentDidMount(){
+      let elementosFavoritos = []
+          elementosFavoritos = JSON.parse(localStorage.getItem("peliculasFavoritas"))
+      let listaNueva = []
+      if (elementosFavoritos != null){
+          listaNueva = elementosFavoritos
+      }
+      console.log(listaNueva)
+      console.log(this.props.peliculas.id)
+      if(listaNueva.includes((this.props.peliculas.id))){
+          this.setState({textoFavoritos: "SACAR DE FAVORITOS"})
+      }else{
+          this.setState({textoFavoritos: "AGREGAR A FAVORITOS"})
+      }
+    }
     clickViewDescription(){
         this.setState({viewDescription: !this.state.viewDescription})
     }
-
+    manejarFavoritos(){
+      let elementosFavoritos = []
+      elementosFavoritos = JSON.parse(localStorage.getItem("peliculasFavoritas"))
+      let listaNueva = []
+      if (elementosFavoritos != null){
+          listaNueva = elementosFavoritos
+      }
+      console.log(listaNueva)
+      if(listaNueva.includes(this.props.peliculas.id)){
+          listaNueva = elementosFavoritos.filter(unId=>{return unId != this.props.peliculas.id})
+          this.setState({textoFavoritos: "AGREGAR A FAVORITOS"})
+      }else{ 
+        console.log("Agrego a Favoritoss")
+          listaNueva.push(this.props.peliculas.id)
+          this.setState({textoFavoritos: "SACAR DE FAVORITOS"})
+      }
+      localStorage.setItem("peliculasFavoritas", JSON.stringify(listaNueva))
+  }
   render() {
     const { peliculas } = this.props;
-
     if (!peliculas) {
       return(
         <div className="loader"></div>
       )
     }
-
     const { id, title, poster_path, overview, vote_average } = peliculas;
-
     return (
       <article className="info">
         <h3 className="tituloProd">{title}</h3>
@@ -36,6 +62,7 @@ class PeliculasInfo extends Component {
         <p className={`description ${this.state.viewDescription ? "show" : "hide"}`}>{overview}</p>
         <button className="boton"><Link className="detalle" to={`/DetallePelicula/movie/${id}`}>Ir a detalle</Link></button>
         {/* <Favoritos id={id} borrarDeFavoritos={this.props.borrarDeFavoritos}/> */}
+        <button className="button" onClick={()=> this.manejarFavoritos()}>{this.state.textoFavoritos}</button>
       </article>    
     );
   }

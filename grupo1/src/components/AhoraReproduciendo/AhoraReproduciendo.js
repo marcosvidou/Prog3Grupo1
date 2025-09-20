@@ -38,9 +38,8 @@ class AhoraReproduciendo extends  Component{
     render(){
         return( 
             <>
-           
             <input className="filtro-input" placeholder="Filtrar Peliculas" onChange={(e)=> this.filtrar(e)}/>
-             {this.state.cargando ? <p>Cargando...</p> :
+            {this.state.cargando ? <p>Cargando...</p> :
             <section>
                 {this.state.textoInput.length==0 ?
                 this.state.pelis.map((pelis, idx) => (
@@ -48,7 +47,6 @@ class AhoraReproduciendo extends  Component{
                 )) : this.state.peliculasFiltradas.map((pelis, idx) => (
                     <PeliculasInfo key={idx} peliculas={pelis} />
                 ))
-
             }
             </section>
     }

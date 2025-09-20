@@ -2,7 +2,6 @@ import React from "react";
 import AhoraReproduciendo from "../../components/AhoraReproduciendo/AhoraReproduciendo";
 
 function SeriesScreen(props) {
-
     console.log(props)
     return (
         <React.Fragment>

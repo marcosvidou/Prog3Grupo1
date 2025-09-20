@@ -1,6 +1,5 @@
 import React from "react";
 import { Component } from "react";
-//import PeliculasInfo from "../Cards/PeliculaCard";
 import { apikey } from "../../apikey";
 import SerieInfo from "../Cards/SerieCard";
 
